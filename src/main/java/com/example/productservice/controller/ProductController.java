@@ -47,6 +47,7 @@ public class ProductController {
     }
 
     public ResponseEntity<Product> getProductById(@PathVariable Long id){
+        System.out.println("getProductById called...");
         return pdoductRepository.findById(id).map(ResponseEntity::ok)
                 .orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).body(null));
     }
