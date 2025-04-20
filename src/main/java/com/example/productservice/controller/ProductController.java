@@ -42,6 +42,7 @@ public class ProductController {
 
     @GetMapping
     public List<Product> getAllProducts(){
+        System.out.println("getAllProducts called...");
         return pdoductRepository.findAll();
     }
 
